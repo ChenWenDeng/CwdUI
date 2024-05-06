@@ -36,6 +36,13 @@
 | center  | 是否对头部和底部采用居中布局 | Boolean | false | false |
 | show-close  | 是否显示关闭按钮 | Boolean | false | true |
 
+## Slot
+|  name  |  说明  |
+|  ----  |  ----  |
+|  —  | Dialog 的内容 |
+| title  | Dialog 标题区的内容 |
+| footer  | Dialog 按钮操作区的内容 |
+
 ## Events
 |  事件名称  |  说明  |  回调参数  |
 |  ----  |  ----  |  ----  |
