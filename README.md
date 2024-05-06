@@ -1,7 +1,7 @@
 # cwd-ui 组件库
 
-### 组件文档
-https://github.com/ChenWenDeng/CwdUI
+### cwd-ui组件文档
+https://chenwendeng.github.io/CwdUI/
 
 ### 快速开始
 
