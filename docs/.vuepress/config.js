@@ -7,6 +7,6 @@ module.exports = {
       { text: 'Github', link: 'https://github.com/ChenWenDeng/CwdUI' },
       { text: 'Npm', link: 'https://www.npmjs.com/package/cwd-ui' },
     ],
-    sidebar: ['/', '/componentDocs/card']
+    sidebar: ['/', '/componentDocs/card','/componentDocs/dialog']
   }
 }

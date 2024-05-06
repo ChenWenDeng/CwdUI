@@ -1,11 +1,13 @@
 // import Demo from './demo';
 import Card from './card';
+import Dialog from './dialog';
 
 import { version } from '../../package.json';
 
 const components = {
   // Demo,
   Card,
+  Dialog
 };
 
 const install = function (Vue) {
