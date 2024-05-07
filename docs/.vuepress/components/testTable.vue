@@ -31,7 +31,9 @@ export default {
     }
   },
   mounted(){
-    this.tableData = this.generateObjectsArray(23);
+    this.$nextTick(()=>{
+      this.tableData = this.generateObjectsArray(23);
+    })
   },
   methods:{
     get_checkArr(val){
@@ -40,22 +42,33 @@ export default {
     get_selected(val){
       console.log(val)
     },
-    generateObjectsArray(n) {
-      const objectsArray = [];
-      const currentDate = new Date();
-
-      for (let i = 1; i <= n; i++) {
-        const date = new Date(currentDate.getTime() - (n - i) * 24 * 60 * 60 * 1000); // 从当前时间往前推，每天一个日期
-        objectsArray.push({
-          id: i,
-          date: date.toLocaleDateString(), // 转换为本地可读的日期格式
-          name: `Name${i}`,
-          age: Math.floor(Math.random() * 90) + 1, // 1到90岁之间的随机年龄
-          address: `Address ${i} Street, City ${i}`,
-          gender: ['Male', 'Female'][Math.floor(Math.random() * 2)] // 随机生成性别
-        });
-      }
-      return objectsArray;
+    generateObjectsArray(numberOfItems){
+      let currentId = 1; // 从1开始  
+      // 创建一个空数组来存储对象  
+      const dataArray = [];  
+      // 循环生成数据  
+      for (let i = 0; i < numberOfItems; i++) {  
+          // 生成一个随机的name、age、address和gender  
+          const name = `User ${Math.floor(Math.random() * 1000)}`; // 假设name是一个随机生成的字符串  
+          const age = Math.floor(Math.random() * 100); // 假设age是一个0-99之间的随机整数  
+          const address = `Street ${Math.floor(Math.random() * 100)}`; // 假设address是一个随机街道名  
+          const gender = Math.random() < 0.5 ? 'Male' : 'Female'; // 假设gender是随机的男或女  
+          // 生成一个正常的日期，这里我们使用当前日期加上一个随机的天数偏移  
+          const today = new Date();  
+          const daysToAdd = Math.floor(Math.random() * 30); // 假设日期偏移是0-29天  
+          const date = new Date(today.setDate(today.getDate() + daysToAdd));  
+          // 创建一个对象，并添加到数组中  
+          const item = {  
+              id: currentId++, // 递增的id  
+              date: date.toISOString().slice(0, 10), // 转换为'YYYY-MM-DD'格式的字符串  
+              name: name,  
+              age: age,  
+              address: address,  
+              gender: gender  
+          };  
+          dataArray.push(item);  
+      }  
+      return dataArray
     }
   }
 }
