@@ -1,16 +1,17 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-// import '../components/css/index.scss'
-// import API from '../components/lib/index'
-// // console.log(API,'API')
-// Vue.use(API.Card)
-// Vue.use(API.Dialog)
-// Vue.use(API.Captcha)
+import '../components/css/index.scss'
+import API from '../components/lib/index'
+console.log(API,'API')
+Vue.use(API.Card)
+Vue.use(API.Dialog)
+Vue.use(API.Captcha)
+Vue.use(API.Table)
 
-import 'cwd-ui/dist/css/index.css'
-import CwdUI from "cwd-ui";
-Vue.use(CwdUI);
+// import 'cwd-ui/dist/css/index.css'
+// import CwdUI from "cwd-ui";
+// Vue.use(CwdUI);
 
 Vue.config.productionTip = false
 
