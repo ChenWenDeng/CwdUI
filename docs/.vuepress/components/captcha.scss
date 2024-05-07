@@ -1,0 +1,11 @@
+.captcha-container {
+  display: flex;
+  align-items: center;
+}
+canvas {
+  margin-right: 10px;
+  border: 1px solid #ccc;
+}
+button {
+  cursor: pointer;
+}

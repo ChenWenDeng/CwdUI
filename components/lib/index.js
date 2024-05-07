@@ -1,13 +1,15 @@
 // import Demo from './demo';
 import Card from './card';
 import Dialog from './dialog';
+import Captcha from './captcha';
 
 import { version } from '../../package.json';
 
 const components = {
   // Demo,
   Card,
-  Dialog
+  Dialog,
+  Captcha
 };
 
 const install = function (Vue) {

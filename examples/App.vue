@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <!-- 验证码 -->
+    <m-captcha @success="onCaptchaSuccess"></m-captcha>
+    <!-- 验证码 -->
+
     <!-- dialog模态框 -->
     <m-dialog :is-visible="showModal"
       title="提示"
@@ -63,6 +67,10 @@ export default {
     }
   },
   methods:{
+    onCaptchaSuccess(captchaText) {
+      console.log('验证码输入成功:', captchaText);
+      // 验证验证码是否正确
+    },
     close(){
       this.showModal = false
     }
