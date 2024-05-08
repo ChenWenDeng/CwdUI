@@ -31,4 +31,11 @@ const API = {
   ...components
 };
 
+export {
+  Card,
+  Dialog,
+  Captcha,
+  Table
+}
+
 export default API;
