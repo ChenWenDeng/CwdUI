@@ -3,6 +3,7 @@ import Card from './card';
 import Dialog from './dialog';
 import Captcha from './captcha';
 import Table from './table';
+import Drag from './drag';
 
 import { version } from '../../package.json';
 
@@ -11,7 +12,8 @@ const components = {
   Card,
   Dialog,
   Captcha,
-  Table
+  Table,
+  Drag
 };
 
 const install = function (Vue) {

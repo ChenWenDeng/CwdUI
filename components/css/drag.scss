@@ -1,0 +1,30 @@
+.d-box{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  .t_box{
+    height: 100vh;
+  }
+}
+.list {
+  height: 100vh;
+  width: 300px;
+  list-style: none;
+  // border: 1px solid salmon;
+  margin: 0 20px;
+  padding: 0;
+  .drag-move {
+    transition: transform .3s;
+  }
+  .list-item {
+    cursor: move;
+    width: 300px;
+    background: #EA6E59;
+    border-radius: 4px;
+    color: #FFF;
+    margin-bottom: 6px;
+    // min-height: 50px;
+    // line-height: 50px;
+    text-align: center;
+  }
+}

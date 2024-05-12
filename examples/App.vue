@@ -1,5 +1,19 @@
 <template>
   <div id="app">
+
+    <m-drag :list="list" :list2="list2">
+      <template v-slot:list="items"> 
+        <div class="div_box" v-for="(val,index) in items" :key="index">
+          {{ val.label  }}
+        </div>
+      </template>  
+      <template v-slot:list2="items"> 
+        <div class="div_box" v-for="(val,index) in items" :key="index">
+          {{ val.label  }}
+        </div>
+      </template>  
+    </m-drag>
+
     <!-- table表格 -->
     <m-table :headers="headers" :tableData="tableData" :checkVal="checkVal" :btnList="btnList"
         @get-selected="get_selected" @get-checkArr="get_checkArr">
@@ -82,13 +96,33 @@ export default {
         {btn:'编辑',style:{background:'#409eff',color:'#fff',border:'#409eff'},fun:(id,row)=>{
           console.log(id,row)
         }}
-      ]  
+      ],
+      list: [
+        { id:1,label: '列表1' ,name:'name1' },
+        { id:2,label: '列表2' ,name:'name2' },
+        { id:3,label: '列表3' ,name:'name3' },
+        { id:4,label: '列表4' ,name:'name4' },
+        { id:5,label: '列表5' ,name:'name5' },
+        { id:6,label: '列表6' ,name:'name6' },
+      ], 
+      list2: [
+        { id:7,label: '列表7' ,name:'name7' },
+        { id:8,label: '列表8' ,name:'name8' },
+        { id:9,label: '列表9' ,name:'name9' },
+        { id:10,label: '列表10' ,name:'name10' },
+        { id:11,label: '列表11' ,name:'name11' },
+        { id:12,label: '列表12' ,name:'name12' },
+      ], 
     }
   },
   mounted(){
     this.tableData = this.generateObjectsArray(23);
   },
   methods:{
+    cl1(){
+      console.log(this.list,'list')
+      console.log(this.list2,'list2')
+    },
     get_checkArr(val){
       console.log(val)
     },
@@ -153,5 +187,11 @@ export default {
   justify-content: space-between;
   padding: 0 8px;
   font-size: 12px;
+}
+.div_box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
 }
 </style>
