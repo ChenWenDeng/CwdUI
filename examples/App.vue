@@ -1,18 +1,29 @@
 <template>
   <div id="app">
-
+    <!-- 拖动排序 -->
     <m-drag :list="list" :list2="list2">
       <template v-slot:list="items"> 
-        <div class="div_box" v-for="(val,index) in items" :key="index">
+        <div class="div-box" v-for="(val,index) in items" :key="index">
           {{ val.label  }}
         </div>
       </template>  
       <template v-slot:list2="items"> 
-        <div class="div_box" v-for="(val,index) in items" :key="index">
+        <div class="div-box" v-for="(val,index) in items" :key="index">
           {{ val.label  }}
         </div>
       </template>  
     </m-drag>
+
+    <div class="h-box">
+      <m-drag :list="list3">
+        <template v-slot:list="items"> 
+          <div class="list-box" v-for="(val,index) in items" :key="index">
+            {{ val.name  }}
+          </div>
+        </template>  
+      </m-drag>
+    </div>
+    <!-- 拖动排序 -->
 
     <!-- table表格 -->
     <m-table :headers="headers" :tableData="tableData" :checkVal="checkVal" :btnList="btnList"
@@ -113,6 +124,28 @@ export default {
         { id:11,label: '列表11' ,name:'name11' },
         { id:12,label: '列表12' ,name:'name12' },
       ], 
+      list3: [
+        { id:1,name: '第1个' , },
+        { id:2,name: '第2个' , },
+        { id:3,name: '第3个' , },
+        { id:4,name: '第4个' , },
+        { id:5,name: '第5个' , },
+        { id:6,name: '第6个' , },
+        { id:7,name: '第7个' , },
+        { id:8,name: '第8个' , },
+        { id:9,name: '第9个' , },
+        { id:10,name: '第10个' , },
+        { id:11,name: '第11个' , },
+        { id:12,name: '第12个' , },
+        { id:13,name: '第13个'  },
+        { id:14,name: '第14个'  },
+        { id:15,name: '第15个'  },
+        { id:16,name: '第16个'  },
+        { id:17,name: '第17个'  },
+        { id:18,name: '第18个'  },
+        { id:19,name: '第19个'  },
+        { id:20,name: '第20个'  },
+      ], 
     }
   },
   mounted(){
@@ -188,10 +221,52 @@ export default {
   padding: 0 8px;
   font-size: 12px;
 }
-.div_box{
+</style>
+
+<style lang="scss">
+.d-box{
+  display: flex;
+  flex-wrap: wrap;
+  .t-box{
+    margin: 0 20px;
+    .list{
+      padding: 0;
+      .list-item{
+        margin: 10px 0;
+        height: 30px;
+      }
+    }
+  }
+}
+.div-box{
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  background: #3eaf7c;
+  width: 300px;
+  border-radius: 5px;
+  color: #fff;
+}
+.h-box{
+  .list{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .list-item{
+    margin: 5px !important;
+    height: 50px !important;
+  }
+  .list-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    background: #3eaf7c;
+    color: #fff;
+  }
 }
 </style>

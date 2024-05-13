@@ -24,12 +24,20 @@
     </m-drag>
 
     <!--单列表-->
-    <m-drag :list="list3">
+    <m-drag :list="list">
         <template v-slot:list="items"> 
             <div class="div_box" v-for="(val,index) in items" :key="index">
             {{ val.label  }}
             </div>
         </template>  
+    </m-drag>
+
+    <m-drag :list="list3">
+      <template v-slot:list="items"> 
+        <div class="list-box" v-for="(val,index) in items" :key="index">
+          {{ val.name  }}
+        </div>
+      </template>  
     </m-drag>
 </template>
 ```
@@ -56,14 +64,28 @@ export default {
             { id:11,label: '列表11' ,name:'name11' },
             { id:12,label: '列表12' ,name:'name12' },
         ], 
-        list3:[
-            { id:13,label: '列表13' },
-            { id:14,label: '列表14' },
-            { id:15,label: '列表15' },
-            { id:16,label: '列表16' },
-            { id:17,label: '列表17' },
-            { id:18,label: '列表18' },
-        ]
+        list3: [
+          { id:1,name: '第1个' , },
+          { id:2,name: '第2个' , },
+          { id:3,name: '第3个' , },
+          { id:4,name: '第4个' , },
+          { id:5,name: '第5个' , },
+          { id:6,name: '第6个' , },
+          { id:7,name: '第7个' , },
+          { id:8,name: '第8个' , },
+          { id:9,name: '第9个' , },
+          { id:10,name: '第10个' , },
+          { id:11,name: '第11个' , },
+          { id:12,name: '第12个' , },
+          { id:13,name: '第13个'  },
+          { id:14,name: '第14个'  },
+          { id:15,name: '第15个'  },
+          { id:16,name: '第16个'  },
+          { id:17,name: '第17个'  },
+          { id:18,name: '第18个'  },
+          { id:19,name: '第19个'  },
+          { id:20,name: '第20个'  },
+        ], 
     }
   },
 }
