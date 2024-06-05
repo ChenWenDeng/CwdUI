@@ -4,6 +4,7 @@ import Dialog from './dialog';
 import Captcha from './captcha';
 import Table from './table';
 import Drag from './drag';
+import Category from './category';
 
 import { version } from '../../package.json';
 
@@ -13,8 +14,18 @@ const components = {
   Dialog,
   Captcha,
   Table,
-  Drag
+  Drag,
+  Category
 };
+
+export {
+  Card,
+  Dialog,
+  Captcha,
+  Table,
+  Drag,
+  Category
+}
 
 const install = function (Vue) {
   if (install.installed) return;
@@ -32,12 +43,5 @@ const API = {
   install,
   ...components
 };
-
-export {
-  Card,
-  Dialog,
-  Captcha,
-  Table
-}
 
 export default API;

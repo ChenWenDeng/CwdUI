@@ -1,0 +1,84 @@
+.category-container{
+  position: relative;
+  display: flex;
+  .parent-span,.category-content-val{
+    cursor: pointer;
+    margin: 0 10px;
+    color: #666;
+  }
+  .parent-span:hover,.category-content-val:hover{
+    color: #04cf73;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+  li{
+    list-style: none;
+  }
+  .category-ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 250px;
+    background: #eeecec;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    background: #e6f5e7;
+    .category-li{
+      padding: 10px 0;
+      color: #666;
+      cursor: pointer;
+      border-bottom: 1px solid #60efae;
+      .category-text:hover{
+        color: #387ff1;
+      }
+    }
+    .category-li:hover{
+      background: #bef1da;
+    }
+  }
+  .category-ul > :last-child {  
+      /* 样式 */  
+      border-bottom: none;
+  }
+  .category-content-ul{
+    z-index: 99999;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 270px;
+    bottom: 0;
+    width: 50%;
+    border: 1px solid #84f573;
+    background: #e6f5e7;
+    padding: 20px;
+    box-shadow:   
+    /* 上边框阴影 */  
+    0 -10px 10px -5px rgba(84, 238, 64, 0.5),
+    /* 右边框阴影（注意：这个阴影会同时覆盖下边框的一部分，所以需要和下边框阴影叠加）*/  
+    10px 0 10px -5px rgba(84, 238, 64, 0.5),
+    /* 下边框阴影（注意：为了覆盖右边框阴影在底部的部分，可能需要调整模糊半径和扩展半径）*/  
+    0 10px 10px -5px rgba(84, 238, 64, 0.5);
+    .category-content-li{
+      display: flex;
+      // flex-wrap: wrap;
+      margin: 10px 0;
+      .category-content-title{
+        min-width: 100px;
+        font-weight: bold;
+        margin-right: 20px;
+      }
+      .category-content-val-box{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .category-content-val{
+        margin: 5px 10px;
+      }
+    }
+  }
+  .cen-box{
+    width: 50%;
+  }
+}

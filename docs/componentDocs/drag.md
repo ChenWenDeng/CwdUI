@@ -96,4 +96,4 @@ export default {
 ## Attributes
 |  参数  |  说明  |  类型  |  是否必要  |  默认值  |
 |  ----  |  ----  |  ----  |  ----  |  ----  |
-| list  | 拖动排序数据 | Array |  true  | — |
+| list  | 传入拖动排序数据，可以直接获取拖动排序后的list数据 | Array |  true  | — |
