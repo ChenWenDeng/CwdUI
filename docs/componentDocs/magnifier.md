@@ -9,7 +9,7 @@
 
 ```html
 <template>
-    <m-magnifier @success="picList"></m-magnifier>
+    <m-magnifier :picList="picList"></m-magnifier>
 </template>
 ```
 
