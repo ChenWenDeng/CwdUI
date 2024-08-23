@@ -9,16 +9,16 @@ import App from './App.vue'
 // Vue.use(Captcha)
 // Vue.use(Table)
 
-// 本地测试，全部导入
-import '../components/css/index.scss'
-import API from '../components/lib/index'
-Vue.use(API)
+// // 本地测试，全部导入
+// import '../components/css/index.scss'
+// import API from '../components/lib/index'
+// Vue.use(API)
 
 
-// // npm下载，全部导入
-// import 'cwd-ui/dist/css/index.css'
-// import CwdUI from "cwd-ui";
-// Vue.use(CwdUI);
+// npm下载，全部导入
+import 'cwd-ui/dist/css/index.css'
+import CwdUI from "cwd-ui";
+Vue.use(CwdUI);
 
 
 Vue.config.productionTip = false

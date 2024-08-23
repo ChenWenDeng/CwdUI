@@ -5,6 +5,7 @@ import Captcha from './captcha';
 import Table from './table';
 import Drag from './drag';
 import Category from './category';
+import Magnifier from './magnifier';
 
 import { version } from '../../package.json';
 
@@ -15,7 +16,8 @@ const components = {
   Captcha,
   Table,
   Drag,
-  Category
+  Category,
+  Magnifier
 };
 
 export {
@@ -24,7 +26,8 @@ export {
   Captcha,
   Table,
   Drag,
-  Category
+  Category,
+  Magnifier
 }
 
 const install = function (Vue) {

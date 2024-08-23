@@ -40,7 +40,7 @@ export default {
         return (Math.floor(1000 + Math.random() * 9000)).toString().padStart(4, '0'); // 生成一个四位数的随机value  
       }  
         
-      function generateChildLevels(minCount = 30) {  
+      function generateChildLevels(minCount = 20) {  
         const childLevels = [];  
         while (childLevels.length < minCount) {  
           const uniqueValue = generateRandomValue();  
@@ -53,7 +53,7 @@ export default {
           }  
         }  
         // 确保child_level至少有20个条目  
-        while (childLevels.length < 30) {  
+        while (childLevels.length < 20) {  
           childLevels.push({  
             label: generateRandomLabel(),  
             value: generateRandomValue(),  

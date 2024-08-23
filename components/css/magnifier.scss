@@ -1,0 +1,87 @@
+.now {
+    border-color: cyan !important;
+  }
+  
+  .mirror {
+    position: relative;
+    width: 100%;
+    .img-box{
+      display: flex;
+      justify-content: center;
+    }
+  
+    &.p-left,
+    &.p-right {
+        display: flex;
+  
+        .picList {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 80px;
+            padding: 0;
+            margin: 0 16px 0 16px;
+        }
+    }
+  
+    .wrap {
+        user-select: none;
+        margin-bottom: 20px;
+        position: relative;
+        background-color: #fff;
+        border: 1px solid gray;
+        box-sizing: border-box;
+        cursor: pointer;
+        img {
+            object-fit: contain;
+            //  width:100%;
+            height: 100%;
+        }
+  
+        .virtual {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: calc(100% + 10px);
+            top: 0;
+            background-repeat: no-repeat
+        }
+  
+        .mask {
+            position: absolute;
+            background-image: url('https://img-tmdetail.alicdn.com/tps/i4/T12pdtXaldXXXXXXXX-2-2.png');
+            background-repeat: repeat;
+            cursor: move;
+        }
+    }
+  
+    .picList {
+        width: 100%;
+        display: flex;
+        //  justify-content: space-between;
+        flex-wrap: wrap;
+        //  overflow: auto;
+        padding: 0;
+  
+        li {
+            width: 80px;
+            height: 80px;
+            margin: 5px;
+            border: 1px solid transparent;
+            box-sizing: border-box;
+            list-style: none;
+  
+            img {
+                object-fit: contain;
+                //  width:100%;
+                height: 100%
+            }
+        }
+    }
+  
+    // .picList:after{
+    //  content:"";
+    //  flex:auto;
+    // }
+  }

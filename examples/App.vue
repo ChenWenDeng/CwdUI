@@ -1,6 +1,19 @@
 <template>
   <div id="app">
+    <m-magnifier :picList="[
+      'https://cbu01.alicdn.com/img/ibank/O1CN01kVF0Ad24SDV24KRJn_!!2215364407389-0-cib.jpg',
+      'https://cbu01.alicdn.com/img/ibank/O1CN01ewmRsc24SDUwhKjXF_!!2215364407389-0-cib.jpg',
+      'https://cbu01.alicdn.com/img/ibank/O1CN01b7AfhM24SDV5jJW7j_!!2215364407389-0-cib.jpg',
+      'https://cbu01.alicdn.com/img/ibank/O1CN01dZ1KZG24SDV3p8BL0_!!2215364407389-0-cib.jpg',
+      'https://cbu01.alicdn.com/img/ibank/O1CN01FANjij1DWBI8PpHOd_!!2207254780223-0-cib.jpg'
+      ]"></m-magnifier>
+
+      <!-- <m-magnifier :minIMGsrc="'https://img2.baidu.com/it/u=1028011339,1319212411&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=313'" :zoomImg="'https://img2.baidu.com/it/u=1028011339,1319212411&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=313'"></m-magnifier> -->
+
+    <!-- 数据分类 -->
     <m-category :category="category" @parent_click="parent_click" @child_click="child_click"></m-category>
+    <!-- 数据分类 -->
+     
     <!-- 拖动排序 -->
     <m-drag :list="list" :list2="list2">
       <template v-slot:list="items"> 
